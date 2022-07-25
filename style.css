@@ -1,168 +1,146 @@
-body{
-    background-color:rgb(252, 229, 233);
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #282828;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
 }
-.container{
-    display: grid;
-    height: 43rem;
-    text-align:center;
-    
+.container-login {
+  background: #fbfbfb;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    grid-template-rows: 0.2fr 0.2fr 1.2fr 0.2fr;
-    grid-template-areas:
-    'header header header header'
-    'sideC middleB middleB sideE'
-    'sideC middleD middleD sideE'
-    'footer footer footer footer' 
-    ;
-    column-gap: 0.5rem;
-    row-gap: 0.8rem;
-}
-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.3rem;
-    font-size: 15pt;
-    border: 0.2rem solid red;
-    background-color: white;
-}
+  height: 30rem;
+  width: 30rem;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 
-.header{
-    grid-area: header;
+  display: grid;
+  grid-template-columns: 0.7fr;
+  grid-template-rows: 4rem 2rem 1.5rem 6rem 6.3rem 3rem 3.5rem 1.5rem 1rem;
+  grid-template-areas:
+    "icone"
+    "portal"
+    "linee"
+    "email"
+    "password"
+    "recover"
+    "button"
+    "second-line"
+    "rights";
+  justify-content: center;
+  /*column-gap: 0.5rem;
+    row-gap: 0.8rem;*/
 }
+/*.container-login div {
+  border: 1px solid black;
+}*/
 
-.sideC{
-    grid-area: sideC;
+.container-login > .icone,
+.portal,
+.rights {
+  display: flex;
+  justify-content: center;
 }
-
-.middleB{
-    grid-area: middleB;
-}
-
-.sideE{
-    grid-area: sideE;
-}
-
-.middleD{
-    grid-area: middleD;
-}
-
-.footer{
-    grid-area: footer;
-}
-
-@media only screen and (max-width:60rem){
-    .container{
-        grid-template-columns: 0.5fr 2fr;
-        grid-template-rows: 0.3fr 0.3fr 1.5fr 0.3fr;
-        grid-template-areas:
-        'header header'
-        'middleB middleB'
-        'sideC middleD'
-        'sideE footer' 
-        ;
-        grid-gap: 0.8rem;
-    }
-    
+.container-login > .email,
+.password {
+  font-size: 10pt;
+  font-weight: bold;
+  color: black;
 }
 
-@media only screen and (max-width:40rem){
-    .container{
-        grid-template-columns: 0.5fr 2fr;
-        grid-template-rows: 0.3fr 0.3fr 1.5fr 0.3fr;
-        grid-template-areas:
-        'header header'
-        'middleB middleB'
-        'sideC middleD'
-        'sideE footer' 
-        ;
-        grid-gap: 0.8rem;
-    }
-    
+.container-login input {
+  height: 2.5rem;
+  width: 22rem;
+
+  box-sizing: border-box;
+  padding-left: 12px;
+  border: 1px solid #686868;
+  border-radius: 5px;
+}
+.container-login button {
+  background-color: #282828;
+  height: 3rem;
+  width: 22.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fcfcfc;
 }
 
-@media only screen and (max-width:35rem){
-    .container{
-        height: 97vh;
-        grid-template-columns: auto;
-        grid-template-rows: 0.2fr 0.2fr 0.6fr 0.2fr 0.2fr 0.2fr;
-        grid-template-areas:
-        'header'
-        'middleB'
-        'middleD'
-        'sideC'
-        'sideE' 
-        'footer' 
-        ;
-        grid-gap: 0.8rem;
-    }
-    
+.icone {
+  grid-area: icone;
+  align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.portal {
+  font-size: 15pt;
+  font-weight: bold;
+  color: rgb(87, 86, 86);
+  grid-area: portal;
+}
+
+.linee {
+  grid-area: linee;
+}
+
+.email {
+  grid-area: email;
+}
+
+.password {
+  grid-area: password;
+}
+
+.recover {
+  font-size: 14px;
+  color: #282828;
+  font-weight: 700;
+  grid-area: recover;
+}
+
+.button {
+  grid-area: button;
+}
+
+.second-line {
+  grid-area: second-line;
+}
+
+.rights {
+  font-size: 14px;
+  font-weight: 500;
+  color: #c4c4c4;
+  grid-area: rights;
+}
+
+a {
+  text-decoration: none;
+  color: #ff9852;
+  font-weight: bold;
+}
+
+img {
+  width: 13rem;
+  height: 2.6rem;
+}
+
+hr {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: none;
+}
+
+::placeholder {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #c8c8c8;
+}
